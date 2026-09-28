@@ -1,0 +1,49 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        int a[n],b[n];
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+        }
+        for(int i=0;i<n;i++){
+            cin>>b[i];
+        }
+        int om_max = 0;
+        int om_curr = 0;
+        for (int i = 0; i < n; i++) {
+            if (a[i] > 0) {
+                om_curr++;
+                om_max = max(om_max, om_curr);
+            } else {
+                om_curr = 0;
+            }
+        }
+           int addy_max = 0;
+        int addy_curr = 0;
+        for (int i = 0; i < n; i++) {
+            if (b[i] > 0) {
+                addy_curr++;
+                addy_max = max(addy_max, addy_curr);
+            } else {
+                addy_curr = 0;
+            }
+        }
+        
+       
+        if (om_max > addy_max) {
+            cout << "OM\n";
+        } else if (addy_max > om_max) {
+            cout << "ADDY\n";
+        } else {
+            cout << "DRAW\n";
+        }
+    
+    }
+
+}
