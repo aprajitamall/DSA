@@ -61,7 +61,7 @@ Happy
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-29T13:35:24.141Z  
+**Submitted:** 2026-09-29T13:35:36.873Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
