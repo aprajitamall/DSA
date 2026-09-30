@@ -56,7 +56,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T14:58:10.899Z  
+**Submitted:** 2026-09-30T15:00:54.104Z  
 
 ```c_cpp
 #include <bits//stdc++.h>
@@ -76,10 +76,17 @@ int main()
             cin>>val;
             oc[val]=1;
         }
-        for(int i=0;i<n)
+        int c_s=1;
+        for(int i=0;i<k;i++)
         {
-            for(int i)
+            while(oc[c_s]==1)
+            {
+                c_s++;
+            }
+            cout<<c_s<<" ";
+            oc[c_s]=1;
         }
+        cout<<"\n";
     }
 }
 
