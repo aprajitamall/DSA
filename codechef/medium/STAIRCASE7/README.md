@@ -58,10 +58,10 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-09-30T15:05:37.960Z  
+**Submitted:** 2026-09-30T15:08:40.184Z  
 
 ```c_cpp
-#include <bits/stdc++.>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
@@ -72,11 +72,16 @@ int main()
         int n;
         cin>>n;
         vector<int>a(n);
+        map<int,int>freq;
+        int m_f=0;
         for(int i=0;i<n;i++)
         {
             cin>>a[i];
+            int diff=a[i]-i;
+            freq[diff]++;
+            m_f=max(m_f,freq[diff]);
         }
-        
+        cout<<n-m_f<<endl;
     }
 }
 
