@@ -15,9 +15,16 @@ int main()
             cin>>val;
             oc[val]=1;
         }
-        for(int i=0;i<n)
+        int c_s=1;
+        for(int i=0;i<k;i++)
         {
-            for(int i)
+            while(oc[c_s]==1)
+            {
+                c_s++;
+            }
+            cout<<c_s<<" ";
+            oc[c_s]=1;
         }
+        cout<<"\n";
     }
 }
