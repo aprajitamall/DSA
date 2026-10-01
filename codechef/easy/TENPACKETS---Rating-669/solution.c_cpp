@@ -1,0 +1,16 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--){
+    int x,y;
+    cin>>x>>y;
+    int op1=x*5;
+    int op2=y+3*x;
+    int op3=2*y+x;
+    cout<<min({op1,op2,op3})<<endl;
+    
+    }
+}
