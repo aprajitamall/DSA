@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        string s;
+        cin>>s;
+        // your code goes here
+        string res="";
+        for(int i=0;i<n-1;i+=2)
+        {
+            if(s[i]=='0'&&s[i+1]=='0')
+            res+='A';
+            if(s[i]=='0'&&s[i+1]=='1')
+            res+='T';
+            if(s[i]=='1'&&s[i+1]=='0')
+            res+='C';
+            if(s[i]=='1'&&s[i+1]=='1')
+            res+='G';
+        }
+        cout<<res<<endl;
+    }
+
+}
