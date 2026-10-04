@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+void solve() {
+    int a1, a2, b1, b2;
+    cin >> a1 >> a2 >> b1 >> b2;
+    
+   
+    int net_A = a1 - a2;
+    int net_B = b1 - b2;
+    
+   
+    int net_C = -(net_A + net_B);
+    
+    if (net_C > 0) {
+        cout << "YES\n";
+    } else {
+        cout << "NO\n";
+    }
+}
+
+int main() {
+    
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+    return 0;
+}
+
