@@ -58,7 +58,7 @@ Yes
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T06:30:50.114Z  
+**Submitted:** 2026-10-05T06:35:23.108Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -73,15 +73,23 @@ int main()
         cin>>n;
         int a[n];
         int sum=0;
+        int flag=1;
         for(int i=0;i<n;i++)
         {
             cin>>a[i];
             sum+a[i];
+            if(sum/(i+1)<40)
+            {
+              flag=0;
+              break;
+            }
+        
         }
-        if(sum/n>=40)
+        if(flag==1)
         cout<<"yes\n";
         else
         cout<<"no\n";
+    
     }
 }
 
