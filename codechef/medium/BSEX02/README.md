@@ -48,7 +48,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T14:58:51.674Z  
+**Submitted:** 2026-10-05T15:02:01.385Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -60,8 +60,10 @@ int main() {
     cin>>t;
     while(t--)
     {
-        int n;
+        long long n;
         cin>>n;
+        long long layers=(-1+sqrt(1+8*n))/2;
+        cout<<layers<<endl;
     }
     return 0;
 }
