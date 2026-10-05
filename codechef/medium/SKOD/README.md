@@ -52,7 +52,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T14:51:14.748Z  
+**Submitted:** 2026-10-05T14:54:55.106Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -66,10 +66,18 @@ int main()
         int n;
         cin>>n;
         int a[n];
+        long long t_sum=0;
+        int min_v=101;
         for(int i=0;i<n;i++)
         {
             cin>>a[i];
+            t_sum+=a[i];
+            if(a[i]<min_v)
+            {
+                min_v=a[i];
+            }
         }
+        cout<<t_sum-min_v<<endl;
     }
 }
 
