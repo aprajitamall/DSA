@@ -58,7 +58,7 @@ Yes
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T06:35:23.108Z  
+**Submitted:** 2026-10-05T06:37:01.156Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -77,8 +77,8 @@ int main()
         for(int i=0;i<n;i++)
         {
             cin>>a[i];
-            sum+a[i];
-            if(sum/(i+1)<40)
+            sum+=a[i];
+            if(sum<40*(i+1))
             {
               flag=0;
               break;
