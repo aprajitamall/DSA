@@ -14,8 +14,8 @@ int main()
         for(int i=0;i<n;i++)
         {
             cin>>a[i];
-            sum+a[i];
-            if(sum/(i+1)<40)
+            sum+=a[i];
+            if(sum<40*(i+1))
             {
               flag=0;
               break;
