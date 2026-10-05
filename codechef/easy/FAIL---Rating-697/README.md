@@ -58,7 +58,7 @@ Yes
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-05T06:36:29.368Z  
+**Submitted:** 2026-10-05T06:37:25.590Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -81,7 +81,7 @@ int main()
             if(sum<40*(i+1))
             {
               flag=0;
-              break;
+            
             }
         
         }
