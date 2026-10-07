@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve()
+{   int n,m;
+   cin>>n>>m;
+   string s,l;
+   cin>>s>>l;
+   vector<bool> is_left(26,false);
+   for(char ch:l)
+   {
+       is_left[ch-'a']=true;
+       }
+       int max_c=0;
+       int curr_con=0;
+       int prev_h=-1;
+       for(char ch:s)
+       {
+           int curr_h=is_left[ch-'a']?1:0;
+           if(curr_h==prev_h)
+           {
+               curr_con++;
+           }
+           else
+           {
+               curr_con=1;
+               prev_h=curr_h;
+           }
+           if(curr_con>max_c){
+               max_c=curr_con;
+           }
+       }
+       cout<<max_c<<"\n";
+}
+int main()
+{
+    
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+    
+}
