@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve()
+{
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    int u=0,d=0,l=0,r=0;
+    for(int i=0;i<n;i++)
+    {
+        if(s[i]=='U')
+        u++;
+        else if(s[i]=='D')
+        d++;
+        else if(s[i]=='L')
+        l++;
+        else if(s[i]=='R')
+        r++;
+    }
+    int x=r-l;
+    int y=u-d;
+    if(x==0&&y==2&&u>0)
+    cout<<"yes\n";
+    else if(x==0&&y==-2&&d>0)
+    cout<<"yes\n";
+    else if(x==2&&y==0&&r>0)
+    cout<<"yes\n";
+    else if(x==-2&&y==0&&l>0)
+    cout<<"yes\n";
+    else
+    cout<<"no\n";
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+}
