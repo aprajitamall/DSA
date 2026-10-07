@@ -1,0 +1,49 @@
+3include <bits/stdc++.h>
+using namespace std;
+void solve()
+{
+    int n;
+    cin>>n;
+    string a,b;
+    cin>>a>>b;
+    int ca=0,cb=0;
+    for(int i=0;i<n;i++)
+    {
+        if(a[i]=='1')
+        ca++;
+        if(b[i]=='1')
+        cb++;
+    }
+    if(ca%2!=cb%2)
+    {
+        cout<<"no\n";
+        return;
+    }
+    if(n==1)
+    {
+        if(a==b)
+        cout<<"yes\n";
+        else
+        cout<<"no\n";
+    }
+    else if(n==2)
+    {
+        if((a=="01"&&b=="10")||(a=="10"&&b=="01"))
+        cout<<"n0\n";
+        else
+        cout<<"yes\n";
+    }
+    else
+    cout<<"yes\n";
+    
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+    
+}
