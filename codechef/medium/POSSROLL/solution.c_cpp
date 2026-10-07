@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x,k,y;
+    cin>>x>>k>>y;
+    if(x*k>=y)
+    cout<<"yes"<<endl;
+    else
+    cout<<"no"<<endl;
+}
