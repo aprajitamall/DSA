@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve()
+{
+    int x,y;
+    cin>>x>>y;
+    string half_one(x/2,'1');
+    string all_two(y,'2');
+    cout<<half_one+all_two+half_one<<endl;
+}
+int main()
+{ int t;
+cin>>t;
+while(t--)
+{
+    solve();
+}
+    
+}
