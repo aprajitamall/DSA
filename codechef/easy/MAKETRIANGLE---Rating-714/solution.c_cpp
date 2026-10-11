@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int x,y,z;
+        cin>>x>>y>>z;
+        int max_s=max({x,y,z});
+        int sum_other=x+y+z-max_s;
+        if(sum_other>max_s)
+        cout<<0<<endl;
+        else
+        cout<<max_s-sum_other+1<<endl;
+    }
+}
