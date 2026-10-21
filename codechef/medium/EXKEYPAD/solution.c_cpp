@@ -1,0 +1,44 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+void solve() {
+    long long N;
+    int D;
+    cin >> N >> D;
+    
+    char d_char = '0' + D;
+    
+    while (true) {
+        string s = to_string(N);
+        size_t idx = s.find(d_char);
+      
+        if (idx == string::npos) {
+            cout << s << "\n";
+            return;
+        }
+        
+        long long prefix = stoll(s.substr(0, idx + 1)) + 1;
+        
+       
+        int rem_len = s.length() - (idx + 1);
+        char fill_char = (D == 0) ? '1' : '0';
+        string suffix(rem_len, fill_char);
+        
+        N = stoll(to_string(prefix) + suffix);
+    }
+}
+
+int main() {
+    
+    int T;
+    if (cin >> T) {
+        while (T--) {
+            solve();
+        }
+    }
+    return 0;
+}
+
