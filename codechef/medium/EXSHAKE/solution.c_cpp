@@ -1,0 +1,40 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+void solve()
+{ int n,m;
+cin>>n>>m;
+vector<int>a(n);
+for(int i=0;i<n;i++)
+{
+    cin>>a[i];
+}
+sort(a.begin(),a.end());
+long long p=0;
+int ans=0;
+for(int i=0;i<n;i++)
+{
+    long long P_n=p+a[i];
+    long long hands=(P_n*(P_n-1))/2;
+    if(hands<=m)
+    {
+        p=P_n;
+        ans++;
+    }
+    else
+    {
+        break;
+    }
+    
+}
+   cout<<ans<<"\n"; 
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+}
