@@ -57,7 +57,7 @@ Test case $4$: Since the final score is $0$, all questions can be skipped.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T15:30:57.766Z  
+**Submitted:** 2026-10-21T15:34:16.433Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -66,6 +66,19 @@ void solve()
 {
     int n,s;
     cin>>n>>s;
+    if(s>n*4)
+    {
+        cout<<-1<<"\n";
+        return;    }
+        long long c=(s>=0)?(s+3)/4:0;
+        long long w=4*c-s;
+        long long attempt=c+w;
+        if (attempt<=n)
+        {
+            cout<<attempt<<endl;
+        }
+        else
+        cout<<-1<<endl;
 }
 int main()
 {
