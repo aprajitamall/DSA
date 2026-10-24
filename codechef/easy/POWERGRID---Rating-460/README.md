@@ -38,7 +38,7 @@ The park has $3 \times 4 = 12$ lamps. Each lamp uses $5$ watts. The total power 
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-24T10:05:33.023Z  
+**Submitted:** 2026-10-24T10:11:19.702Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
