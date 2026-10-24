@@ -41,24 +41,22 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-24T10:12:23.933Z  
+**Submitted:** 2026-10-24T10:11:24.003Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-    int N;
-    cin>>N;
-   if (N >= 0 && N <= 9) {
-            cout << "1\n";
-        } else if (N >= 10 && N <= 99) {
-            cout << "2\n";
-        } else if (N >= 100 && N <= 999) {
-            cout << "3\n";
-        } else {
-            cout << "More than 3 digits\n";
-        }
+    int n;
+    cin>>n;
+    int count=0;
+    while(n!=0)
+    {
+        count++;
+        n=n/10;
+    }
+    cout<<count<<endl;
 }
 
 ```
