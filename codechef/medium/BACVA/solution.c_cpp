@@ -4,6 +4,16 @@ void solve()
 {
     long long a;
     cin>>a;
+    sum=0;
+    while(a!=0)
+    {
+        sum+=a%10;
+        a/=10;
+    }
+    if(sum%10==0)
+    cout<<"valid\n";
+    else
+    cout<<"invalid\n";
     
 }
 int main()
