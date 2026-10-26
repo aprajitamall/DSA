@@ -4,8 +4,8 @@ void solve()
 {
     long long a;
     cin>>a;
-    sum=0;
-    while(a!=0)
+    int sum=0;
+    while(a>0)
     {
         sum+=a%10;
         a/=10;
