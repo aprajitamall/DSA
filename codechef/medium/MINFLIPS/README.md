@@ -64,7 +64,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-26T15:08:35.929Z  
+**Submitted:** 2026-10-26T15:12:18.634Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -73,6 +73,21 @@ void solve()
 {
     int n;
     cin>>n;
+    int count=0;
+    for(int i=0;i<n;i++)
+    {
+        int val;
+        cin>>val;
+        if(val==1)
+        count++;
+    }
+    if(n%2!=0)
+    cout<<-1<<"\n";
+    else
+    {
+    int target=n/2;
+    cout<<abs(count-target)<<endl;
+    }
     
 }
 int main()
