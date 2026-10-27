@@ -1,0 +1,14 @@
+pair<int, int> findMinMax(int n, const vector<int>& arr) {
+//write your code here
+int max_v=arr[0];
+int min_v=arr[0];
+for(int i=1;i<n;i++)
+{
+    if(arr[i]>max_v)
+    max_v=arr[i];
+    if(arr[i]<min_v)
+    min_v=arr[i];
+}
+return {min_v,max_v};
+
+}
