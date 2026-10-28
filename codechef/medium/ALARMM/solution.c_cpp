@@ -1,4 +1,6 @@
-#include <iostream>
+
+    
+ #include <iostream>
 #include <string>
 #include <algorithm>
 
@@ -12,27 +14,31 @@ void solve()
     cin >> s;
     
     int alarm = 0;
-    int leftmost_cover = n + 1;
     
-    for (int i = n - 1; i >= 0; i--)
+    int rightmost_cover = 0; 
+    
+    for (int i = 1; i <= n; i++)
     {
-        if (s[i] == '1')
+        if (s[i-1] == '1')
         {
-            if (i >= leftmost_cover)
+            
+            if (i <= rightmost_cover)
             {
                 continue;
             }
-            int p = min(n, (i + 1) + k);
-            leftmost_cover = max(1, p - k) - 1;        
+           
+            int p = min(n, i + k);
+            
+            rightmost_cover = p;
+            
             alarm++;
         }
     }
-    cout << alarm << "\n"; 
+    cout << alarm << "\n";
 }
 
 int main()
 {
-    
     
     int t;
     if (cin >> t)
@@ -44,4 +50,3 @@ int main()
     }
     return 0;
 }
-
