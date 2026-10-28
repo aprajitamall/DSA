@@ -4,7 +4,27 @@ void solve()
 {
     int n;
     cin>>n;
+    string s;
     cin>>s;
+    int opening=0;
+    char current_button=' ';
+    int streak=0;
+    for(char ch:s)
+    {
+        if(ch==current_button)
+        streak++;
+        else
+        {
+            current_button=ch;
+            streak=1;
+        }
+        if(streak==3)
+        {
+        opening++;
+        streak=0;
+        }
+    }
+    cout<<opening<<endl;
 }
 int main()
 {
