@@ -1,31 +1,47 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <algorithm>
+
 using namespace std;
+
 void solve()
 {
-    int n,k;
-    cin>>n>>k;
+    int n, k;
+    cin >> n >> k;
     string s;
-    cin>>s;
-    int alarm=0;
-    int leftmost_cover=n+1;
-    for(int i=n-1;i>=0;i--)
+    cin >> s;
+    
+    int alarm = 0;
+    int leftmost_cover = n + 1;
+    
+    for (int i = n - 1; i >= 0; i--)
     {
-        if(s[i]=='1')
+        if (s[i] == '1')
         {
-            if(i>=leftmost_cover)
-            continue;
-            int p=min(n,(i+1)+k);
-            leftmost_cover=max(1,p-k)-1;        
-        alarm++;
+            if (i >= leftmost_cover)
+            {
+                continue;
+            }
+            int p = min(n, (i + 1) + k);
+            leftmost_cover = max(1, p - k) - 1;        
+            alarm++;
         }
     }
-    cout<<alarm<<endl;}
+    cout << alarm << "\n"; 
+}
+
 int main()
 {
-   int t;
-   cin>>t;
-   while(t--)
-   {
-       solve();
-   }
+    
+    
+    int t;
+    if (cin >> t)
+    {
+        while (t--)
+        {
+            solve();
+        }
+    }
+    return 0;
 }
+
