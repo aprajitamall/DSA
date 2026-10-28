@@ -66,7 +66,7 @@ BBBBAAAAABBBBBBB
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-28T15:03:25.057Z  
+**Submitted:** 2026-10-28T15:08:56.897Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -75,7 +75,27 @@ void solve()
 {
     int n;
     cin>>n;
+    string s;
     cin>>s;
+    int opening=0;
+    char current_button=' ';
+    int streak=0;
+    for(char ch:s)
+    {
+        if(ch==current_button)
+        streak++;
+        else
+        {
+            current_button=ch;
+            streak=1;
+        }
+        if(streak==3)
+        {
+        opening++;
+        streak=0;
+        }
+    }
+    cout<<opening<<endl;
 }
 int main()
 {
