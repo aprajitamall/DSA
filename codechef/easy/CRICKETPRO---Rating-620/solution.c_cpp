@@ -1,0 +1,8 @@
+int tournamentProfit(int Y) {
+    // write your code here 
+    if(Y*200>=5000)
+    return Y*200-5000;
+    else
+    return -1;
+    
+}
