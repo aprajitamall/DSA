@@ -1,0 +1,15 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int x,y,z;
+        cin>>x>>y>>z;
+        int pair_1_3=min(x,z);
+        int pair_2_2=y/2;
+        cout<<pair_1_3+pair_2_2<<endl;
+    }
+}
