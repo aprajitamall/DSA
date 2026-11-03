@@ -54,7 +54,7 @@ Chef will reduce one income source so that his total income becomes $4$ rupees w
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-03T14:27:40.347Z  
+**Submitted:** 2026-11-03T14:29:40.110Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -67,8 +67,13 @@ int main()
     {
         int x,y,z;
         cin>>x>>y>>z;
+        int maxs=z/y;
+        if(maxs>x)
+        maxs=x;
+        int reduce=x-maxs;
+        cout<<reduce<<endl;
         
-        cout<<x*y/z<<endl;
+        
     }
 }
 
