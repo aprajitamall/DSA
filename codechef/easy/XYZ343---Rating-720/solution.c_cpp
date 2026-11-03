@@ -8,7 +8,12 @@ int main()
     {
         int x,y,z;
         cin>>x>>y>>z;
+        int maxs=z/y;
+        if(maxs>x)
+        maxs=x;
+        int reduce=x-maxs;
+        cout<<reduce<<endl;
         
-        cout<<x*y/z<<endl;
+        
     }
 }
