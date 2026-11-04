@@ -1,0 +1,90 @@
+#include <bits/stdc++.h>
+using namespace std;
+long long gcd(long long a,long long b)
+{
+    while(b)
+    {
+        a%=b;
+        swap(a,b);
+    }
+    return a;
+}
+long long extgcd(long long a, long long b, long long &x, long long &y) {
+    if (b == 0) {
+        x = 1;
+        y = 0;
+        return a;
+    }
+    long long x1, y1;
+    long long d = extgcd(b, a % b, x1, y1);
+    x = y1;
+    y = x1 - y1 * (a / b);
+    return d;
+}
+
+void solve() {
+    long long X, Y, D;
+    cin >> X >> Y >> D;
+
+    long long g = gcd(X, Y);
+    long long ans = -1;
+    for (long long k = 0; k <= D; k++) {
+        if (k % g != 0) continue;
+
+       
+        long long x0, y0;
+        extgcd(X, Y, x0, y0); 
+        
+        
+        long long a = x0 * (k / g);
+        long long b = -y0 * (k / g);
+        
+        long long step_a = Y / g;
+        long long step_b = X / g;
+
+       
+        long long shift = max((1 - a + step_a - 1) / step_a, (1 - b + step_b - 1) / step_b);
+        a += shift * step_a;
+        b += shift * step_b;
+long long shift_down = min((a - 1) / step_a, (b - 1) / step_b);
+        a -= shift_down * step_a;
+        b -= shift_down * step_b;
+
+        if (a > 0 && b > 0 && a * X - b * Y == k) {
+            long long t = a * X;
+            if (ans == -1 || t < ans) {
+                ans = t;
+            }
+        }
+
+        
+        a = -x0 * (k / g);
+        b = y0 * (k / g);
+
+        shift = max((1 - a + step_a - 1) / step_a, (1 - b + step_b - 1) / step_b);
+        a += shift * step_a;
+        b += shift * step_b;
+        shift_down = min((a - 1) / step_a, (b - 1) / step_b);
+        a -= shift_down * step_a;
+        b -= shift_down * step_b;
+
+        if (a > 0 && b > 0 && b * Y - a * X == k) {
+            long long t = b * Y;
+            if (ans == -1 || t < ans) {
+                ans = t;
+            }
+        }
+    }
+
+    cout << ans << "\n";
+   
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+}
