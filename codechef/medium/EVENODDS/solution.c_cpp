@@ -32,4 +32,5 @@ int main()
         int option1 = n - (first_odd + 1);
         int option2 = last_odd;
         cout << max(option1, option2) << "\n";    }
+    }
 }
