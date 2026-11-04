@@ -75,7 +75,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T15:16:30.549Z  
+**Submitted:** 2026-11-04T15:19:40.549Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -92,8 +92,11 @@ void solve()
         for (int j = 0; j < m; j++) {
             if (row[j] == '1') {
                 min_row = min(min_row, i);
+                
                 max_row = max(max_row, i);
+                
                 min_col = min(min_col, j);
+                
                 max_col = max(max_col, j);
             }
         }
