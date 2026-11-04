@@ -72,7 +72,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T15:09:41.266Z  
+**Submitted:** 2026-11-04T15:11:19.649Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -109,6 +109,7 @@ int main()
         int option1 = n - (first_odd + 1);
         int option2 = last_odd;
         cout << max(option1, option2) << "\n";    }
+    }
 }
 
 ```
