@@ -1,0 +1,45 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void solve() {
+    int N, A, B;
+    cin >> N >> A >> B;
+    
+    vector<int> T(N);
+    for (int i = 0; i < N; ++i) {
+        cin >> T[i];
+    }
+    
+    int wear_count = 0;
+    bool has_jacket = false; 
+    
+    for (int i = 0; i < N; ++i) {
+        if (T[i] < A) {
+    
+            if (!has_jacket) {
+                wear_count++;
+                has_jacket = true;
+            }
+        } 
+        else if (T[i] > B) {
+            has_jacket = false;
+        }
+        
+    }
+    
+    cout << wear_count << "\n";
+}
+
+int main() {
+    
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+    
+    return 0;
+}
+
