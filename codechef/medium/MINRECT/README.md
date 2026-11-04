@@ -75,7 +75,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-04T15:19:40.549Z  
+**Submitted:** 2026-11-04T15:20:25.543Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -84,8 +84,8 @@ void solve()
 {
     int n,m;
     cin>>n>>m;
-    int min_r=n,max_r=-1;
-    int min_c=m,max_c=-1;
+    int min_row=n,max_row=-1;
+    int min_col=m,max_col=-1;
     for (int i = 0; i < n; i++) {
         string row;
         cin >> row;
