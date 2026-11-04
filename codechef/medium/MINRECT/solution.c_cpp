@@ -12,8 +12,11 @@ void solve()
         for (int j = 0; j < m; j++) {
             if (row[j] == '1') {
                 min_row = min(min_row, i);
+                
                 max_row = max(max_row, i);
+                
                 min_col = min(min_col, j);
+                
                 max_col = max(max_col, j);
             }
         }
