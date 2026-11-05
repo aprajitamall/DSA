@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve()
+{
+     string n;
+    cin>>n;
+    string rev_n = n;
+    reverse(rev_n.begin(), rev_n.end());
+    if(n==rev_n)
+    cout<<"wins\n";
+    else
+    cout<<"loses\n";
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+}
