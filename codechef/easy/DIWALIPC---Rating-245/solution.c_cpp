@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int p,d,k,b;
+        cin>>p>>d>>k>>b;
+        long long final=p+(d*k);
+        if(final<=b)
+        cout<<"yes\n";
+        else
+        cout<<"no\n";
+        
+    }
+}
