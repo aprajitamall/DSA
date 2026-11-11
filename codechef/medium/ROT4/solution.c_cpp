@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve()
+{
+    int n;
+    cin>>n;
+    string s;
+    cin>>s;
+    int count=0;
+    for(int i=0;i<n;i++)
+    {
+        int d1 = s[i] - '0';
+        int d2 = s[(i + 1) % n] - '0'; // Wraps around to s[0] when i == n - 1
+        
+        int last_two_digits = d1 * 10 + d2;
+        
+        if (last_two_digits % 4 == 0) {
+            count++;
+        }
+    }
+    cout<<count<<endl;
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+}
