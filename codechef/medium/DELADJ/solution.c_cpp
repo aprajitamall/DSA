@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve()
+{
+    int n;
+    cin>>n;
+    vector<long long> a(n + 1);
+    for (int i = 1; i <= n; i++) {
+        cin >> a[i];
+    }
+
+    if (n % 2 == 0) {
+        long long ans = 0;
+        for (int i = 1; i <= n; i++) {
+            if (i % 2 == 1) ans += a[i];
+            else ans -= a[i];
+        }
+        cout << ans << "\n";
+    } else {
+        vector<long long> pref(n + 1, 0);
+        for (int i = 1; i <= n; i++) {
+            pref[i] = pref[i - 1] + (i % 2 == 1 ? a[i] : -a[i]);
+        }
+        vector<long long> suff(n + 2, 0);
+        for (int i = n; i >= 1; i--) {
+            suff[i] = suff[i + 1] + (i % 2 == 0 ? a[i] : -a[i]);
+        }
+
+        long long ans = -4e18;
+        for (int k = 1; k <= n; k += 2) {
+            long long current = pref[k] + suff[k + 1];
+            ans = max(ans, current);
+        }
+        cout << ans << "\n";
+    }
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+}
