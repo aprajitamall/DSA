@@ -64,7 +64,7 @@ Output
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-11T14:51:12.986Z  
+**Submitted:** 2026-11-11T14:52:05.340Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -73,35 +73,27 @@ void solve()
 {
     int n;
     cin>>n;
+    
     vector<long long> a(n + 1);
+    long long ans = 0;
     for (int i = 1; i <= n; i++) {
         cin >> a[i];
+        ans -= a[i];
     }
 
-    if (n % 2 == 0) {
-        long long ans = 0;
-        for (int i = 1; i <= n; i++) {
-            if (i % 2 == 1) ans += a[i];
-            else ans -= a[i];
-        }
-        cout << ans << "\n";
-    } else {
-        vector<long long> pref(n + 1, 0);
-        for (int i = 1; i <= n; i++) {
-            pref[i] = pref[i - 1] + (i % 2 == 1 ? a[i] : -a[i]);
-        }
-        vector<long long> suff(n + 2, 0);
-        for (int i = n; i >= 1; i--) {
-            suff[i] = suff[i + 1] + (i % 2 == 0 ? a[i] : -a[i]);
-        }
+    priority_queue<long long> pq;
+    pq.push(a[1]);
+    ans += 2 * pq.top();
+    pq.pop();
 
-        long long ans = -4e18;
-        for (int k = 1; k <= n; k += 2) {
-            long long current = pref[k] + suff[k + 1];
-            ans = max(ans, current);
-        }
-        cout << ans << "\n";
+    for (int i = 3; i <= n; i += 2) {
+        pq.push(a[i - 1]);
+        pq.push(a[i]);
+        ans += 2 * pq.top();
+        pq.pop();
     }
+
+    cout << ans << "\n";
 }
 int main()
 {
