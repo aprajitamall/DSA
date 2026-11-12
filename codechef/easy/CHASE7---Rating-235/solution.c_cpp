@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int r,b;
+    cin>>r>>b;
+    if(r<=6*b)
+    cout<<"yes\n";
+    else 
+    cout<<"no\n";
+}
