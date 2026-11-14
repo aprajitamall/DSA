@@ -12,6 +12,8 @@ You can return the answer in any order.
 
  
 
+Original
+C++
  **Example 1:** 
 
  **Input:**  `nums = [2,7,11,15], target = 9`
@@ -58,9 +60,9 @@ The sum of `nums[0]` and `nums[1]` is `3 + 3 = 6`, which equals the target. Ther
 ## Solution
 
 **Language:** C++  
-**Runtime:** 142 ms (beats 5.02%)  
-**Memory:** 14 MB (beats 97.74%)  
-**Submitted:** 2026-11-08T14:27:13.668Z  
+**Runtime:** 147 ms (beats 5.03%)  
+**Memory:** 14.1 MB (beats 74.71%)  
+**Submitted:** 2026-11-14T12:36:51.324Z  
 
 ```cpp
 class Solution {
