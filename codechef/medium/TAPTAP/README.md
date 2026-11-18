@@ -63,7 +63,7 @@ This leaves no finger free to tap the note at time $6$.
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-18T15:47:16.562Z  
+**Submitted:** 2026-11-18T15:48:04.111Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -71,8 +71,9 @@ using namespace std;
 const int MOD = 998244353;
 void solve()
 {
-    int n,g;
-    cin>>n,g;
+    int n;
+    long long g;
+    cin>>n>>g;
     vector<long long> a(n + 1);
     for (int i = 1; i <= n; ++i) {
         cin >> a[i];
