@@ -53,7 +53,7 @@ YES
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-19T15:39:32.991Z  
+**Submitted:** 2026-11-19T15:40:31.228Z  
 
 ```c_cpp
 #include <iostream>
@@ -66,7 +66,7 @@ int main()
     {
         int x,y;
         cin>>x>>y;
-        if(y!=0&&y%x==0)
+        if(y>=3*x)
         cout<<"yes\n";
         else
         cout<<"no\n";
