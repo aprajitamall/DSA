@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+void solve()
+{
+    int x,y,z;
+    cin>>x>>y>>z;
+    int m1=x-z;
+    int m2=x+z;
+    int d1=x-y;
+    int d2=x+y;
+    if(m1<d1&&m2>d2)
+    cout<<2*y<<endl;
+    else
+    cout<<abs(m2-m1)<<endl;
+}
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+}
