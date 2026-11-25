@@ -1,0 +1,49 @@
+#include <algorithm>
+#include <cmath>
+#include <iostream>
+#include <utility>
+#include <vector>
+
+using namespace std;
+
+long long king_dist(pair<long long, long long> a, pair<long long, long long> b) {
+    return max(abs(a.first - b.first), abs(a.second - b.second));
+}
+
+void solve() {
+    long long N, M, r, c;
+    cin >> N >> M >> r >> c;
+
+    pair<long long, long long> start = {r, c};
+    vector<pair<long long, long long>> corners = {
+        {1, 1},
+        {1, M},
+        {N, 1},
+        {N, M}
+    };
+
+    sort(corners.begin(), corners.end());
+
+    long long min_moves = 4e18; 
+
+    do {
+        long long current_moves = king_dist(start, corners[0]);
+        for (int i = 0; i < 3; ++i) {
+            current_moves += king_dist(corners[i], corners[i + 1]);
+        }
+        min_moves = min(min_moves, current_moves);
+    } while (next_permutation(corners.begin(), corners.end()));
+
+    cout << min_moves << "\n";
+}
+
+int main() {
+
+    int T;
+    cin >> T;
+    while (T--) {
+        solve();
+    }
+    return 0;
+}
+
