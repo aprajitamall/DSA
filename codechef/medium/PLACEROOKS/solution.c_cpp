@@ -1,0 +1,52 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+void solve() {
+    int N, M;
+    cin >> N >> M;
+
+    vector<string> grid(N, string(M, '.'));
+    int r = 0, c = 0;
+    int rooks = 0;
+
+    while (N - r >= 1 && M - c >= 1 && (N - r) + (M - c) >= 3) {
+        if (N - r >= M - c) {
+            grid[r][c] = 'R';
+            grid[r + 1][c] = 'R';
+            r += 2;
+            c += 1;
+            rooks += 2;
+        } else {
+            grid[r][c] = 'R';
+            grid[r][c + 1] = 'R';
+            r += 1;
+            c += 2;
+            rooks += 2;
+        }
+    }
+
+    if (N - r >= 1 && M - c >= 1) {
+        grid[r][c] = 'R';
+        rooks += 1;
+    }
+
+    cout << rooks << "\n";
+    for (int i = 0; i < N; ++i) {
+        cout << grid[i] << "\n";
+    }
+}
+
+int main() {
+    
+
+    int T;
+    cin >> T;
+    while (T--) {
+        solve();
+    }
+    return 0;
+}
+
