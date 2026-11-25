@@ -60,7 +60,7 @@ YES
 **Language:** c_cpp  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-11-25T14:53:33.933Z  
+**Submitted:** 2026-11-25T14:56:39.281Z  
 
 ```c_cpp
 #include <bits/stdc++.h>
@@ -72,7 +72,15 @@ int main()
     while(t--)
     {
         int n,k;
-        cin>>
+        cin>>n>>k;
+        if(k<=n&&n<=2*k)
+        {
+            cout<<"yes\n";
+        }
+        else
+        {
+            cout<<"no\n";
+        }
     }
 }
 
