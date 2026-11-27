@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int t;
+    cin>>t;
+    int deno[6]={100,50,10,5,2,1};
+    while(t--)
+    {
+        int n;
+        cin>>n;
+        int total=0;
+        for(int i=0;i<6;i++)
+        {
+            total+=n/deno[i];
+            n%=deno[i];
+        }
+        cout<<total<<"\n";
+    }
+}
